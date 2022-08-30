@@ -1,7 +1,7 @@
 from current_track import current_track
-from oauth import OAuth
+from oauth import bot_token_auth
 
 
 if __name__ == '__main__':
-    client = OAuth()
-    current_track(client)
+    bot = bot_token_auth()
+    current_track(bot)

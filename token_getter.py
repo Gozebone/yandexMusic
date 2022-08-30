@@ -6,6 +6,7 @@ from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.remote.command import Command
 from webdriver_manager.chrome import ChromeDriverManager
 
+
 def is_active(driver):
     try:
         driver.execute(Command.GET_ALL_COOKIES)
@@ -13,7 +14,8 @@ def is_active(driver):
     except Exception:
         return False
 
-def getToken():
+
+def get_token():
     # make chrome log requests
     capabilities = DesiredCapabilities.CHROME
     capabilities["loggingPrefs"] = {"performance": "ALL"}

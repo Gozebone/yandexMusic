@@ -1,10 +1,17 @@
 import os
 from yandex_music import Client
-from tokenGetter import getToken
+from token_getter import get_token
 
 
-def OAuth():
-    token = getToken()
-    print(token)
-    print(os.environ.get('TOKEN'))
+def oauth(token):
     return Client(token).init()
+
+
+def new_token_auth():
+    token = get_token()
+    return oauth(token)
+
+
+def bot_token_auth():
+    token = os.environ.get('TOKEN')
+    return oauth(token)

@@ -1,5 +1,5 @@
 from current_track import current_track
-from oauth import bot_token_auth
+from oauth import bot_token_auth, new_token_auth
 
 
 if __name__ == '__main__':

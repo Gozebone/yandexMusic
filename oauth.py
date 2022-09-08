@@ -13,5 +13,5 @@ def new_token_auth():
 
 
 def bot_token_auth():
-    token = os.environ.get('TOKEN')
+    token = os.environ.get('BOT_TOKEN')
     return oauth(token)
